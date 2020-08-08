@@ -1,0 +1,27 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "Desenvolvimento de uma plataforma para alunos e professores.Onde os alunos possam ver aulas gravadas por especialistas na area \r e também possam criar conteudo nas areas que dominam assim compartilhando seus conhecimentos.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erwakaz/next-level-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erwakaz/next-level-2/issues"
+  },
+  "homepage": "https://github.com/Erwakaz/next-level-2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
