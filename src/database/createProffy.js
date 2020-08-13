@@ -13,8 +13,7 @@ module.exports = async function(db, {proffyValue, classValue, classScheduleValue
             "${proffyValue.bio}"
         );
     `)
-
-
+    
     const proffy_id = insertedProffy.lastID
 
     //inserir dados na tabela classes

@@ -1,2 +1,0 @@
-Desenvolvimento de uma plataforma para alunos e professores.Onde os alunos possam ver aulas gravadas por especialistas na area 
-e também possam criar conteudo nas areas que dominam assim compartilhando seus conhecimentos.

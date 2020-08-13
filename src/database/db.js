@@ -27,4 +27,5 @@ function execute(db) {
         );
     `)
 }
+11
 module.exports = Database.open(__dirname + '/database.sqlite').then(execute)

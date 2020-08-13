@@ -2,10 +2,18 @@ const Database = require('./database/db')
 
 
 const {subjects, weekdays,getSubject, convertHoursToMinutes } = require('./utils/format')
+
+
 //Server sends archivier
 function pageLanding(req, res){
     return res.render("index.html")
 }
+
+
+
+
+
+
 
 async function pageStudy(req, res){
     const filters = req.query
@@ -50,8 +58,10 @@ async function pageStudy(req, res){
 
 function pageGiveClasses(req, res){
     return res.render("give-classes.html", { subjects, weekdays } )
-   
 }
+
+
+
 async function saveClasses(req, res){
     const createProffy = require('./database/createProffy')
 
@@ -61,7 +71,7 @@ async function saveClasses(req, res){
         whatsapp: req.body.whatsapp,
         bio: req.body.bio
     }
-    
+    //console.log(req.body.whatsapp)
     const classValue = {
         subject: req.body.subject,
         cost: req.body.cost
@@ -81,18 +91,21 @@ async function saveClasses(req, res){
         let queryString = `?subject=${req.body.subject}`
         queryString += `&weekday=${req.body.weekday[0]}`
         queryString += `&time=${req.body.time_from[0]}`
-
-       
-        return res.redirect("/study"+ queryString)
+        return res.redirect('/page-success' + queryString)
+        
+        //return res.redirect("/study"+ queryString)
     } catch (error) {
         console.log(error)
     }
  
 }
+    function pageSuccess(req, res){
+        return res.render("page-success.html")
+    }
 module.exports = {
     pageLanding,
     pageStudy,
     pageGiveClasses,
-    saveClasses
-    
+    saveClasses,
+    pageSuccess,   
 }

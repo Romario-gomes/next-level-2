@@ -1,0 +1,25 @@
+*{
+    color: var(--color-text-in-primary);
+
+}
+
+body{
+    background: var(--color-primary);
+    background-image: url("/images/success-background.svg");
+
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 45rem;
+}
+#container p,
+#container h1{
+    text-align: center;
+    color:var(--color-title-in-primary);
+}
